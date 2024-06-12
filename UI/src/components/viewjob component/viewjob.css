@@ -1,0 +1,33 @@
+#marq{
+    height : auto;
+    width :100%;
+    font-size: 50px;
+    color: black;
+}
+.marquee{
+    scroll-timeline: 5;
+}
+#job{
+    height : 650px;
+    width :100%;
+}
+#nav{
+    width:10%;
+    float: left;
+}
+#job nav li{
+    background-color: yellow;
+    margin : 0 0 0 0 ;
+    text-decoration: none;
+}
+#jobs{
+    width: 100%;
+    float: right;
+}
+.job_part{
+        height: 450px;
+        width: 50%;
+        float: left;
+        padding-top: 20px;
+        border: 2px solid rgb(161, 161, 161);
+}

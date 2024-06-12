@@ -1,0 +1,11 @@
+#subcategory{
+    height:650px;
+    width:100%;
+}
+.category_part{
+    height: 50%;
+    width: 25%;
+    float: left;
+    padding-top: 20px;
+    border: 2px solid rgb(165, 164, 164);
+}
