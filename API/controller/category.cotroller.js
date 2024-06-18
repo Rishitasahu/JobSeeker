@@ -9,8 +9,6 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 //to save 
 export var save = async (req,res,next)=>{
-    console.log(req.body);
-    console.log(req.files);
     var caticon = req.files.caticonname;
     //the caticonname which is come in req.files is stored in the instance caticon
 
@@ -21,7 +19,6 @@ export var save = async (req,res,next)=>{
     //it upload img to caticon folder in UI
 
     var catList = await CategorySchemaModel.find();
-    console.log(catList);
     var l = catList.length;
     var _id1;
     if(l==0)

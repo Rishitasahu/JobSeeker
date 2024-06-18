@@ -42,7 +42,7 @@ function Manageuser(){
         else
         {
             const deleteDetails={"data":{"_id":_id}};
-            axios.delete(userapiurl+"delete",deleteDetails).then((ersponse)=>{
+            axios.delete(userapiurl+"delete",deleteDetails).then((response)=>{
                 alert("user deleted");
                 navigate("/manageuser");
             }).catch((error)=>{

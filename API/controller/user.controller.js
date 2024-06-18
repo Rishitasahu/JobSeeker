@@ -51,7 +51,6 @@ export var login = async (req,res,next)=>{
 
 export var fetch = async (req,res,next)=>{
     var userDetails = url.parse(req.url,true).query;
-    console.log(userDetails);
     var userList = await userSchemaModel.find(userDetails);
     var l = userList.length;
     if(l != 0){

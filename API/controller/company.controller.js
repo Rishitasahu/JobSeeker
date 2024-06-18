@@ -26,7 +26,7 @@ export var save = async (req,res,next)=>{
         res.status(201).json({"Response" : "sucess", companyDetails});
     }
     catch(err){
-        console.log(err);
+        //console.log(err);
         res.status(500).json({"Response" : "Error"});
     }
 };
@@ -51,15 +51,15 @@ export var login = async (req,res,next)=>{
 //to fetch api 
 
 export var fetch = async (req,res,next)=>{
-    var userDetails = url.parse(req.url,true).query;
-    console.log(userDetails);
-    var userList = await companySchemaModel.find(userDetails);
-    var l = userList.length;
+    var companyDetails = url.parse(req.url,true).query;
+    //console.log(companyDetails);
+    var companyList = await companySchemaModel.find(companyDetails);
+    var l = companyList.length;
     if(l != 0){
-        res.status(201).json(userList);
+        res.status(201).json(companyList);
     }
     else
-        res.status(500).json({"response " : "user Deatials are not found"});
+        res.status(500).json({"response " : "company Deatials are not found"});
 };
 
 //to update api
@@ -68,7 +68,7 @@ export var updateUser=async(req,res,next)=>{
     let userDetails = await companySchemaModel.findOne(req.body.condition_obj);
     if(userDetails){
        let user=await companySchemaModel.updateOne(req.body.condition_obj,{$set: req.body.content_obj});
-       console.log(user)   
+       //console.log(user)   
        if(user)
         res.status(201).json({"msg":"success"});
        else

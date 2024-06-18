@@ -25,6 +25,7 @@ import Footer from './components/footer component/footer.js';
 import Logout from './components/logout component/logout.js';
 import FPassword from './components/Forgot Password component/ForgotPassword.js';
 import Manageuser from './components/ManageUser component/manageuser.js';
+import ManagaeCompany from './components/ManagaeCompany component/ManagaeCompany.js';
 import Addcategory from './components/addcategory component/addcategory.js';
 import Addsubcategory from './components/addSubcategory component/addsubcategory.js';
 import Viewjob from './components/viewjob component/viewjob.js';
@@ -58,6 +59,7 @@ function App() {
         <Route path = '/logout' element = {<Logout/>}></Route>
         <Route path = '/forgot' element = {<FPassword/>}></Route>
         <Route path = '/manageuser' element = {<Manageuser/>}></Route>
+        <Route path = '/managecompany' element = {<ManagaeCompany/>}></Route>
         <Route path = '/addcategory' element = {<Addcategory/>}></Route>
         <Route path = "/addsubcategory" element = {<Addsubcategory/>}></Route>
         <Route path = "/viewjob/:subCatname" element = {<Viewjob/>}></Route>

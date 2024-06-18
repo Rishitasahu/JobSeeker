@@ -9,8 +9,6 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 //to save 
 export var save = async (req,res,next)=>{
-    /*console.log(req.body);
-    console.log(req.files);*/
     var ScatDetails = req.body;
     var ScatList = await subCategorySchemaModel.find();
     var l = ScatList.length;
@@ -42,7 +40,6 @@ export var save = async (req,res,next)=>{
 // to fetch data
 export var fetch = async (req,res,next)=>{
     var ScategoryDetails = url.parse(req.url,true).query;
-    //console.log(ScategoryDetails);
     var ScategoryList =await subCategorySchemaModel.find(ScategoryDetails);
     if(ScategoryList.length)
         res.status(200).json({"Response": "find",ScategoryList});

@@ -12,6 +12,7 @@ function FPassword() {
     const handlesubmit=()=>{
         axios.get(userapiurl+"fetch?email="+userEmail).then((response)=>{
             console.log(response.data[0].email);
+            console.log(response.data[0].password);
             if(response.data[0]!=null || response.data[0].email==userEmail){
                 setOutput("mailsend");
                 //sendForgotMailAPI(response.data[0].email,response.data[0].password);

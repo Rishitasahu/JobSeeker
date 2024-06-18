@@ -1,5 +1,5 @@
 import './register.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
 import {userapiurl} from '../UserAPIURL component/userapiurl.js';
 
@@ -13,6 +13,7 @@ function Register(){
     const [city , setCity] = useState();
     const [gender , setGender] = useState();
     const [output , setOutput] = useState();
+    const [err , seterr] = useState();
 
     const handleSubmit = ()=>{
         var userDetails = {"name": name,"email": email, "password":password, "mobile":mobile, "address":address, "city":city, "gender":gender}
@@ -31,6 +32,9 @@ function Register(){
             console.log(error);
             setOutput("Registration Failed");
         });
+        if(name==null){
+            seterr("Name is required");
+        }
 
     }
 return (
@@ -46,6 +50,7 @@ return (
                         <div class="form-group ">
                             <label for="namr" class="form-label">Name</label>
                             <input type="text" class="form-control" value ={name} onChange = {e => setName(e.target.value)} />
+                            <font color="red">{err}</font>
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>

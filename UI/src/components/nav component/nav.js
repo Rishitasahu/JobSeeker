@@ -21,6 +21,7 @@ function Nav() {
                         <div class="navbar-nav ms-auto p-4 p-lg-0">
                             <a class="nav-item nav-link"><Link to="/admin">Admin Home</Link></a>
                             <a class="nav-item nav-link"><Link to="/manageuser">Manage User</Link></a>
+                            <a class="nav-item nav-link"><Link to="/managecompany">Manage Company</Link></a>
                             <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><Link to="/service">Settings</Link></a>
                                 <div class="dropdown-menu fade-up m-0">

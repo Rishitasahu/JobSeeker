@@ -9,7 +9,6 @@ import url from 'url';
 export var save = async (req,res,next)=>{
     var joblist = await jobSchemaModel.find();
     var l= joblist.length;
-    console.log(joblist);
     if(l==0)
         _id=1;
     else{
@@ -32,7 +31,6 @@ export var save = async (req,res,next)=>{
 
 export var login = async (req,res,next)=>{
     var userDetails = req.body;
-    console.log(userDetails);
     var userDetails={...userDetails,"status" : 1};
     var userList = await jobSchemaModel.find(userDetails);
     if(userList.length != 0)
@@ -49,9 +47,7 @@ export var login = async (req,res,next)=>{
 //to fetch api 
 
 export var fetch = async (req,res,next)=>{
-    console.log("ok!!");
     var JobDetails = url.parse(req.url,true).query;
-    console.log(JobDetails);
     var JobList = await jobSchemaModel.find(JobDetails);
     var l = JobList.length;
     if(l != 0){

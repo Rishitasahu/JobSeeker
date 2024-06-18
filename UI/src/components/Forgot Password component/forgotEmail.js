@@ -13,7 +13,7 @@ function sendForgotMailAPI(user_email,user_password){
         from: 'sahurishita123@gmail.com',
         to: user_email,
         subject: 'Forgot Password Email : JobSeeker',
-        html: "<h1>Wlecome to JobSeeker </h1><p>Your Old Password to Register Email is</p><h3>Username : "+user_email+"</h3> <h3>Password : "+user_password+"</h3>"
+        html: "<h1>Wlecome to JobSeeker </h1><p>To Rest Password Old Paasword is </p><h3>Username : "+user_email+"</h3> <h3>Password : "+user_password+"</h3>"
       };
       
       transporter.sendMail(mailOptions, function(error, info){
